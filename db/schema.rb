@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_141728) do
+ActiveRecord::Schema.define(version: 2020_11_06_181930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accolades", force: :cascade do |t|
+    t.string "nominator", null: false
+    t.text "body", null: false
+    t.string "chosen_charity", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
