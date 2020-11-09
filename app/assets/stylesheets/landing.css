@@ -1,0 +1,51 @@
+ 
+@import 'settings';
+@import 'foundation';
+@import "./color_variables.scss";
+
+
+body {
+  background-color: #FCE3B0;
+};
+
+/* .nav.top-bar {
+  background-color: #FCE3B0;
+} */
+
+.callout.large {
+  margin: 75px 6rem 0.5rem 6rem;
+  border-radius: .2rem;
+  background-color: $peach;
+  border: 1px solid $emerald;
+}
+
+.science {
+  margin-top: 50px;
+}
+
+.welcome {
+  text-align: center;
+  border: 3px solid $dark-liver;
+  border-radius: .2rem;
+  width: fit-content;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.app-description {
+  color: $dark-liver;
+  font-weight: 200;
+  font-size: 1em;
+}
+
+.button.landing {
+  margin-right: 8px;
+}
+
+.logo-text{
+  font-family: 'Arima Madurai', cursive;
+}
+
+.card {
+  border-radius: .2rem;
+}

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :api do    
-    namespace :v1 do 
+    namespace :v1 do
+      resources :landings, only: [:index] 
       resources :users, only: [:index, :new, :show] do
         resources :accolades, only: [:index, :new, :create]
       end

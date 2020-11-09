@@ -1,6 +1,6 @@
 class Accolade < ApplicationRecord
   validates :body, presence: true
-  validates :chosen_charity, presence: true
+  # validates :chosen_charity, presence: true
   validates :nominator, presence: true
 
 
