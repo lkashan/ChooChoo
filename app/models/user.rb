@@ -6,7 +6,7 @@ class User < ApplicationRecord
   
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   validates :phone_number, format: { with: /\d{3}-\d{3}-\d{4}/, message: "format 123-456-7890" }
   validates :donation_pledge, presence: true
   validates :charity_1, presence: true

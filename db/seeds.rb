@@ -52,3 +52,9 @@ user4 = User.new(
 )
 user4.password = "123456"
 user4.save
+
+acc1 = Accolade.create!(nominator: "Vinnie", body: "Big shoutout to Lauren coming through with the tasty grasshoppers today! I LOVE GRASSHOPPERS YOU'RE THE BEST", user_id: "1")
+acc2 = Accolade.create!(nominator: "Atari", body: "Thanksssss for letting me hang out on your niccccce warm computer sssscreen all day", user_id: "3")
+acc3 = Accolade.create!(nominator: "Ack", body: "F R I E N D!!!!!! Always knows where to find the BEST bugs. CA-CAWWWWWW", user_id: "2")
+acc4 = Accolade.create!(nominator: "Stycc", body: "So grateful to have someone so similar to me in my life! It's like we're the same person!", user_id: "3")
+acc5 = Accolade.create!(nominator: "Justin", body: "SHAKE SHAKE SHAKE SENORA, SHAKE YOUR BODY LINE. Seriously though, best jumper, dancer, and murderer of fruit flies ever", user_id: "4")
