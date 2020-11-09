@@ -34,7 +34,7 @@ export const LandingContainer = (props) => (
     </div>
   </div>
   <div className="grid-container science">
-    <h3 className="text-center">The Science Behind ChooChoo</h3>
+    <h3 className="text-center">Believe the Hype: The Science Behind ChooChoo</h3>
     <div className="grid-x grid-margin-x medium-up-4 large-up-4">
       <div className="cell">
         <div className="card">
