@@ -6,12 +6,12 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :first_name, null: false, default: ""
-      t.string :last_name, null: false, default: ""
-      t.string :phone_number, null: false, default: ""
-      t.integer :donation_pledge, null: false, default: ""
-      t.string :charity_1, null: false, default: ""
-      t.string :charity_1_link, null: false, default: ""
+      t.string :first_name,         null: false, default: ""
+      t.string :last_name,          null: false, default: ""
+      t.string :phone_number,       null: false, default: ""
+      t.integer :donation_pledge,   null: false, default: ""
+      t.string :charity_1,          null: false, default: ""
+      t.string :charity_1_link,     null: false, default: ""
       # t.string :charity_2, null: false, default: ""
       # t.string :charity_2_link, null: false, default: ""
       # t.string :charity_3, null: false, default: ""
@@ -42,7 +42,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
-
 
       t.timestamps null: false
     end

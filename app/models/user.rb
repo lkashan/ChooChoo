@@ -12,5 +12,5 @@ class User < ApplicationRecord
   validates :charity_1, presence: true
   validates :charity_1_link, presence: true
 
-  has_many: accolades
+  has_many :accolades
 end
