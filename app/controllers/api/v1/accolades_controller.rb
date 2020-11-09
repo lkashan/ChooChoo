@@ -3,6 +3,11 @@ class Api::V1::AccoladesController < ApplicationController
     accolades = Accolade.all
     render json: accolades
 
+  def show
+    accolade = Accolade.find(params["id"])
+    render json: accolade
+  end
+
   def new
     user = User.find(params[:user_id])
     accolade = Accolade.new
