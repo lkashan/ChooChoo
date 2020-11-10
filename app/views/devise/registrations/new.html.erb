@@ -1,62 +1,60 @@
-<div class="grid-x">
-  <h2>Create Your Profile</h2><br><br/ >
+<h2>Create Your Profile</h2><br><br/ >
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field">
-      <%= f.label :first_name, "First Name:" %>
-      <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name"%>
-    </div>
-
-    <div class="field">
-      <%= f.label :last_name, "Last Name" %>
-      <%= f.text_field :last_name, autocomplete: "last_name" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :email, "Email:"%>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :phone_number, "Phone number that can recieve SMS notifications"%>
-      <%= f.telephone_field :phone_number, autocomplete: "phone_number" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :donation_pledge, "How much are you willing to pledge to donate for each Hype Train that rolls through?"%>
-      <%= f.text_field :donation_pledge, autofocus: true, autocomplete: "donation_pledge" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :charity_1, "Name of a charity you wish to support"%>
-      <%= f.text_field :charity_1, autofocus: true, autocomplete: "charity_1" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :charity_1_link, "Link to charity's website or donation page"%>
-      <%= f.text_field :charity_1_link, autofocus: true, autocomplete: "charity_1_link" %>
-    </div>
-
-
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "All Aboard!" %>
-    </div>
-    <% end %>
-    <%= render "devise/shared/links" %>
+  <div class="field">
+    <%= f.label :first_name, "First Name:" %>
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name"%>
   </div>
+
+  <div class="field">
+    <%= f.label :last_name, "Last Name" %>
+    <%= f.text_field :last_name, autocomplete: "last_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Email:"%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number, "Phone number that can recieve SMS notifications"%>
+    <%= f.telephone_field :phone_number, autocomplete: "phone_number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :donation_pledge, "How much are you willing to pledge to donate for each Hype Train that rolls through?"%>
+    <%= f.text_field :donation_pledge, autofocus: true, autocomplete: "donation_pledge" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :charity_1, "Name of a charity you wish to support"%>
+    <%= f.text_field :charity_1, autofocus: true, autocomplete: "charity_1" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :charity_1_link, "Link to charity's website or donation page"%>
+    <%= f.text_field :charity_1_link, autofocus: true, autocomplete: "charity_1_link" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "All Aboard!" %>
+  </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
 </div>

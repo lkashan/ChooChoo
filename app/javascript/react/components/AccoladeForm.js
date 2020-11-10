@@ -49,7 +49,7 @@ const AccoladeForm = props => {
       </label>
 
       <div className="button-group">
-        <input className="button" type="submit" value="Submit" />
+        <input className="button" type="submit" value="All Aboard!" />
       </div>
     </form>
   )

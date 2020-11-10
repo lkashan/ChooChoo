@@ -15,7 +15,7 @@ export const LandingContainer = (props) => (
   <div className="callout large primary">
     <div className="media-object stack-for-small">
       <div className="media-object-section">
-        <h4 text-center>What? Why? How?</h4>
+        <h4 className="text-center">What? Why? How?</h4>
         <p>
           ChooChoo is platform where folks can send out their 
           own personal hype train of public praise and superlatives 
@@ -81,9 +81,9 @@ export const LandingContainer = (props) => (
   <div className="callout large primary">
     <div className="media-object stack-for-small">
       <div className="media-object-section">
-        <h4 text-center>Lets Get Started!</h4>
+        <h4 className="text-center">Lets Get Started!</h4>
         <p>
-          "Description text here"
+          Description text here
         </p>
       </div>
     </div>

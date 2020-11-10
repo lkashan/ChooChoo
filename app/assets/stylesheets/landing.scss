@@ -1,16 +1,13 @@
- 
-@import 'settings';
-@import 'foundation';
-@import "./color_variables.scss";
+@import "color_variables";
 
 
 body {
   background-color: #FCE3B0;
 };
 
-/* .nav.top-bar {
+nav.top-bar {
   background-color: #FCE3B0;
-} */
+}
 
 .callout.large {
   margin: 75px 6rem 0.5rem 6rem;
@@ -49,3 +46,4 @@ body {
 .card {
   border-radius: .2rem;
 }
+

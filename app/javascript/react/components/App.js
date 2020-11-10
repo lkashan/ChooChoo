@@ -4,6 +4,7 @@ import {Route, Switch, BrowserRouter} from "react-router-dom"
 // import UserIndex from "./UserIndex";
 import UserShow from "./UserShow";
 import AccoladeForm from "./AccoladeForm";
+import AccoladeTile from "./AccoladeTile";
 import LandingContainer from "./LandingContainer"
 
 
