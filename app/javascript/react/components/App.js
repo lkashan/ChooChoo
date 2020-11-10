@@ -12,7 +12,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={LandingContainer}/>
       <Route exact path="/form" component={AccoladeForm}/>
-      <Route exact path="/users/:id" component={UserShow}/>
+      {/* <Route exact path="/users/:id" component={UserShow}/> */}
     </Switch> 
   </BrowserRouter>
 );
