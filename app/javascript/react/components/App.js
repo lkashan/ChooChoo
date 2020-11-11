@@ -7,13 +7,12 @@ import AccoladeForm from "./AccoladeForm";
 import AccoladeTile from "./AccoladeTile";
 import LandingContainer from "./LandingContainer"
 
-
 const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={LandingContainer}/>
       <Route exact path="/form" component={AccoladeForm}/>
-      {/* <Route exact path="/users/:id" component={UserShow}/> */}
+      <Route exact path="/users/:id" component={UserShow}/>
     </Switch> 
   </BrowserRouter>
 );

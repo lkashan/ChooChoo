@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 
 const AccoladeForm = props => {
 
@@ -26,9 +27,9 @@ const AccoladeForm = props => {
   }
   return (
     <form className="new-accolade-form callout" onSubmit={handleSubmit}>
-      <h4>All Aboard The props.user.name Hype Train!***get user.name </h4> 
+      <h4>All Aboard The {props.user} Hype Train!</h4> 
       <label className="accolade-label">
-        What's got you hyped on props.user.name?
+        What's got you hyped on {props.user}?
         <input
           name="body"
           id="body"

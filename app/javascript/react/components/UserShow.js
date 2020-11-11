@@ -72,7 +72,15 @@ const UserShow = (props) => {
   ); 
 
   return (
-    <div> You found the user show page  </div>
+    <div> 
+      <h3>o wow u found {props.user} show page yay good job</h3> 
+      <AccoladeForm 
+          id={id} 
+          handleSubmit={handleSubmit}
+        />
+        <div className="accolade-list">{accoladeTileArray}
+        </div>
+      </div>
   )
 }
 
