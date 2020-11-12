@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import SearchBar from './SearchBar'
 
 export const LandingContainer = (props) => (
-  <div>
+<div>
   <div className="welcome">
     <h2>Your Own Personal Hype Train!</h2>
     <h3 className="app-description">
@@ -11,7 +12,7 @@ export const LandingContainer = (props) => (
     and happiness, and seeks to foster a cycle of positive community engagement 
     and corresponding charitable donations.
     </h3>
-    </div>
+  </div>
   <div className="callout large primary">
     <div className="media-object stack-for-small">
       <div className="media-object-section">
@@ -33,6 +34,9 @@ export const LandingContainer = (props) => (
       </div>
     </div>
   </div>
+  <div>
+    <SearchBar/>
+  </div> 
   <div className="grid-container science">
     <h3 className="text-center">Believe the Hype: The Science Behind ChooChoo</h3>
     <div className="grid-x grid-margin-x medium-up-4 large-up-4">

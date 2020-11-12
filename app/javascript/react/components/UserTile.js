@@ -7,7 +7,7 @@ const userTile = (props) => {
 
   return(
   <div className="user-tile">
-    <Link to={`user/${props.id}`}>
+    <Link to={`users/${props.id}`}>
       <h3>{full_name}</h3>
     </Link>
   </div>

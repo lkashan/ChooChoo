@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do    
     namespace :v1 do
+      post 'users/search', to: 'users#search'
       resources :landings, only: [:index] 
       resources :users, only: [:index, :new, :show] do
         resources :accolades, only: [:index, :new, :create]

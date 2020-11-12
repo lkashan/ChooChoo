@@ -4,7 +4,7 @@ class Api::V1::AccoladesController < ApplicationController
     render json: accolades
 
   def show
-    accolade = Accolade.find(params["id"])
+    accolade = Accolade.find(params[:id])
     render json: accolade
   end
 
