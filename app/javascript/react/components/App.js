@@ -6,7 +6,6 @@ import UserShow from "./UserShow";
 import AccoladeForm from "./AccoladeForm";
 import AccoladeTile from "./AccoladeTile";
 import LandingContainer from "./LandingContainer"
-import SearchBar from "./SearchBar"
 
 const App = () => (
   <BrowserRouter>

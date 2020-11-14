@@ -35,11 +35,11 @@ class SearchBar extends Component {
   }
 
   render() {
-    const users = this.state.users.map(user => {
+    const users = this.state.users.map((user => {
       return(
-      <li>{user.first_name} {user.last_name}</li>
+      <li key={user.id}><a href={`/users/${user.id}`}>{user.first_name} {user.last_name}</a></li>
       )
-    })
+    }))
 
     return(
     <div>
