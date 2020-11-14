@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-const userTile = (props) => {
+const UserTile = (props) => {
 
   const full_name = "{props.first_name} {props.last_name}"
 
