@@ -3,12 +3,21 @@ import AccoladeForm from "./AccoladeForm";
 import AccoladeTile from "./AccoladeTile";
 
 const UserShow = (props) => {
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({
+    id: null,
+    first_name: "",
+    last_name: "",
+    phone_number: "",
+    donation_pledge: "",
+    charity_1: "",
+    charity_1_link: ""
+  })
   const [accolades, setAccolades] = useState([])
 
   const id = props.match.params.id;
 
   useEffect(() => {
+    
     fetch(`/api/v1/users/${id}`, {
       credentials: "same-origin"
     })
@@ -24,9 +33,10 @@ const UserShow = (props) => {
     .then(response => {
       return response.json()
     })
-    .then(responseBody => {
-      
-      setUser({responseBody});  
+
+    .then(responseBody => { 
+  
+      setUser(responseBody);  
       setAccolades(responseBody.accolades);
     })
   .catch(error => console.error(`Error in fetch: ${error.message}`))
@@ -62,9 +72,8 @@ const UserShow = (props) => {
     .then(body => {setAccolades([...accolades, body.accolade]);})
     .catch(error => console.error(`Error in fetch: ${error.message}`))
     }
-    //debugger
    const accoladeTileArray = accolades.map((accolade) => {
-     //debugger
+     
     return (
     <AccoladeTile
       key={accolade.id}
@@ -73,20 +82,22 @@ const UserShow = (props) => {
       body={accolade.body}
     />)
   }); 
-
+  
   return (
     <div> 
-      <h3> {props.user} </h3> 
-        <AccoladeForm 
-          id={id} 
-          handleSubmit={handleSubmit}
-          user={user}
-          />
-        <div className="accolade-list">
-          {accoladeTileArray}
+      <h3>All Aboard The {user.first_name} {user.last_name} Hype Train!</h3> 
+      <AccoladeForm 
+      id={id} 
+      handleSubmit={handleSubmit}
+      user={user}
+      />
+      <h3> {user.first_name} {user.last_name} </h3> 
+      <div className="accolade-list">
+        {accoladeTileArray}
       </div>
     </div>
   )
 }
 
 export default UserShow;
+
