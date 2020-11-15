@@ -85,15 +85,23 @@ const UserShow = (props) => {
   
   return (
     <div> 
-      <h3>All Aboard The {user.first_name} {user.last_name} Hype Train!</h3> 
-      <AccoladeForm 
-      id={id} 
-      handleSubmit={handleSubmit}
-      user={user}
-      />
-      <h3> {user.first_name} {user.last_name} </h3> 
-      <div className="accolade-list">
-        {accoladeTileArray}
+      <h3>All Aboard The {user.first_name} {user.last_name} HypeTrain!</h3> 
+      <div>
+        <ul> 
+          <li>My Chosen Charity: <a href="{user.charity_1_link}"> {user.charity_1} </a></li>
+          <li>For each HypeTrain I receive, I pledge to donate: ${user.donation_pledge}</li>
+        </ul>
+      </div>
+      <div>
+        <AccoladeForm 
+          id={id} 
+          handleSubmit={handleSubmit}
+          user={user}
+        />
+        <h3>See what everyone else has been squawking about: </h3> 
+        <div className="accolade-list">
+          {accoladeTileArray}
+        </div>
       </div>
     </div>
   )
