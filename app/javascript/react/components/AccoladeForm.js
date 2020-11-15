@@ -20,15 +20,14 @@ const AccoladeForm = props => {
     event.preventDefault()
     props.addNewAccoladeFunction(newAccolade)
     setNewAccolade({
-      body: "",
+      body: newAccolade.body,
       // chosen_charity: "",
-      nominator: ""
+      nominator: newAccolade.nominator
     })
   }
 
-  
   return (
-    <form className="new-accolade-form callout" onSubmit={handleSubmit}>
+    <form className="new-accolade-form callout" onSubmit={props.handleSubmit}>
       <label className="accolade-label">
         What's got you hyped on {props.user.first_name}?
         <input
@@ -51,7 +50,7 @@ const AccoladeForm = props => {
       </label>
 
       <div className="button-group">
-        <input className="button" type="submit" value="All Aboard!" />
+        <input className="button" type="submit" value="Submit" />
       </div>
     </form>
   )

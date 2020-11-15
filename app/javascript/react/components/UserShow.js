@@ -35,7 +35,6 @@ const UserShow = (props) => {
     })
 
     .then(responseBody => { 
-  
       setUser(responseBody);  
       setAccolades(responseBody.accolades);
     })
@@ -44,12 +43,11 @@ const UserShow = (props) => {
 
   const handleSubmit = (event, newAccolade) => { 
     event.preventDefault();
-
     const formPayload = {
       accolade: newAccolade
     }
 
-    fetch(`/api/v1/users/${id}/accolades`, {
+    fetch(`/api/v1/users/${user.id}/accolades`, {
       credentials: "same-origin",
       method: "POST",
       body: JSON.stringify(formPayload),
@@ -108,4 +106,3 @@ const UserShow = (props) => {
 }
 
 export default UserShow;
-
