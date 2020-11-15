@@ -46,6 +46,7 @@ const UserShow = (props) => {
     const formPayload = {
       accolade: newAccolade
     }
+    console.log(newAccolade)
 
     fetch(`/api/v1/users/${user.id}/accolades`, {
       credentials: "same-origin",

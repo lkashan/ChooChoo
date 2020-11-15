@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 const AccoladeForm = props => {
 
+  const {handleSubmit} = props
   const [newAccolade, setNewAccolade] = useState({
     body: "",
     // chosen_charity: "",
@@ -10,31 +11,32 @@ const AccoladeForm = props => {
   })
 
   const handleChange = (event) => {
+    console.log(event)
     setNewAccolade({
       ...newAccolade,
       [event.currentTarget.name]: event.currentTarget.value
     })
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    props.addNewAccoladeFunction(newAccolade)
-    setNewAccolade({
-      body: newAccolade.body,
-      // chosen_charity: "",
-      nominator: newAccolade.nominator
-    })
-  }
+  // const handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   props.addNewAccoladeFunction(newAccolade)
+  //   setNewAccolade({
+  //     body: newAccolade.body,
+  //     // chosen_charity: "",
+  //     nominator: newAccolade.nominator
+  //   })
+  // }
 
   return (
-    <form className="new-accolade-form callout" onSubmit={props.handleSubmit}>
+    <form className="new-accolade-form callout" onSubmit={handleSubmit}>
       <label className="accolade-label">
         What's got you hyped on {props.user.first_name}?
         <input
           name="body"
           id="body"
           type="text"
-          onChange={handleChange}
+          onChange={(e) => {handleChange(e)} }
           value={newAccolade.body}
         />
       </label>
@@ -44,7 +46,7 @@ const AccoladeForm = props => {
           name="nominator"
           id="nominator"
           type="textarea"
-          onChange={handleChange}
+          onChange={(e) => {handleChange(e)} }
           value={newAccolade.nominator}
         />
       </label>

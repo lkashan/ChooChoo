@@ -15,7 +15,7 @@ class Api::V1::AccoladesController < ApplicationController
   end
 
   def create
-    user = User.find(params[:user_id]) # should this actually be user_id or just id?
+    user = User.find(params[:user_id]) 
     accolade = Accolade.new(accolade_params)
     accolade.user = user
 
@@ -29,7 +29,7 @@ class Api::V1::AccoladesController < ApplicationController
   private
 
   def accolade_params
-    params.require(:accolade).permit(:nominator, :body)
+    params.require(:accolade).permit(:nominator, :body, :user_id)
   end
   
 end
