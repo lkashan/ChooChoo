@@ -25,12 +25,12 @@ const AccoladeForm = props => {
       nominator: ""
     })
   }
+
   
   return (
     <form className="new-accolade-form callout" onSubmit={handleSubmit}>
-      <h4>All Aboard The {props.user} Hype Train!</h4> 
       <label className="accolade-label">
-        What's got you hyped on {props.user}?
+        What's got you hyped on {props.user.first_name}?
         <input
           name="body"
           id="body"
