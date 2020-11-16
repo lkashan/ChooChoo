@@ -2,6 +2,7 @@ class Api::V1::AccoladesController < ApplicationController
   def index
     accolades = Accolade.all
     render json: accolades
+  end
 
   def show
     accolades = Accolade.find(params[:id])
@@ -14,12 +15,12 @@ class Api::V1::AccoladesController < ApplicationController
   end
 
   def create
-    user = User.find(params[:user_id]) # should this actually be user_id or just id?
+    user = User.find(params[:user_id]) 
     accolade = Accolade.new(accolade_params)
-    accolade.user = accolade #current_user????
+    accolade.user = user
 
     if accolade.save
-      render json: { accolade }
+      render json: { accolade: accolade }
     else
       render json: { error: accolade.errors.full_message }, status: 400
     end
@@ -28,7 +29,7 @@ class Api::V1::AccoladesController < ApplicationController
   private
 
   def accolade_params
-    params.require(:accolade).permit(:nominator, :body)
+    params.require(:accolade).permit(:nominator, :body, :user_id)
   end
   
 end

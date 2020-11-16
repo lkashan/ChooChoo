@@ -17,7 +17,7 @@ const UserShow = (props) => {
   const id = props.match.params.id;
 
   useEffect(() => {
-    
+
     fetch(`/api/v1/users/${id}`, {
       credentials: "same-origin"
     })
@@ -34,22 +34,17 @@ const UserShow = (props) => {
       return response.json()
     })
 
-    .then(responseBody => { 
-  
-      setUser(responseBody);  
+    .then(responseBody => {
+      setUser(responseBody);
       setAccolades(responseBody.accolades);
     })
-  .catch(error => console.error(`Error in fetch: ${error.message}`))
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])
 
-  const handleSubmit = (event, newAccolade) => { 
-    event.preventDefault();
+  const handleSubmit = (newAccolade) => {
+    const formPayload = {accolade: newAccolade}
 
-    const formPayload = {
-      accolade: newAccolade
-    }
-
-    fetch(`/api/v1/users/${id}/accolades`, {
+    fetch(`/api/v1/users/${user.id}/accolades`, {
       credentials: "same-origin",
       method: "POST",
       body: JSON.stringify(formPayload),
@@ -73,32 +68,32 @@ const UserShow = (props) => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
     }
    const accoladeTileArray = accolades.map((accolade) => {
-     
     return (
-    <AccoladeTile
-      key={accolade.id}
-      user={user}
-      nominator={accolade.nominator}
-      body={accolade.body}
-    />)
-  }); 
-  
+      <AccoladeTile
+        key={accolade.id}
+        user={user}
+        nominator={accolade.nominator}
+        body={accolade.body}
+      />
+    );
+  });
+
   return (
-    <div> 
-      <h3>All Aboard The {user.first_name} {user.last_name} HypeTrain!</h3> 
+    <div>
+      <h3>All Aboard The {user.first_name} {user.last_name} HypeTrain!</h3>
       <div>
-        <ul> 
+        <ul>
           <li>My Chosen Charity: <a href="{user.charity_1_link}"> {user.charity_1} </a></li>
           <li>For each HypeTrain I receive, I pledge to donate: ${user.donation_pledge}</li>
         </ul>
       </div>
       <div>
-        <AccoladeForm 
-          id={id} 
+        <AccoladeForm
+          id={id}
           handleSubmit={handleSubmit}
           user={user}
         />
-        <h3>See what everyone else has been squawking about: </h3> 
+        <h3>See what everyone else has been squawking about: </h3>
         <div className="accolade-list">
           {accoladeTileArray}
         </div>
@@ -108,4 +103,3 @@ const UserShow = (props) => {
 }
 
 export default UserShow;
-

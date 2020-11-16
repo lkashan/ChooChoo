@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom"
 
 const AccoladeForm = props => {
 
+  const { user } = props;
+
   const [newAccolade, setNewAccolade] = useState({
     body: "",
-    // chosen_charity: "",
     nominator: ""
-  })
+  });
 
   const handleChange = (event) => {
     setNewAccolade({
@@ -16,26 +16,15 @@ const AccoladeForm = props => {
     })
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    props.addNewAccoladeFunction(newAccolade)
-    setNewAccolade({
-      body: "",
-      // chosen_charity: "",
-      nominator: ""
-    })
-  }
-
-  
   return (
-    <form className="new-accolade-form callout" onSubmit={handleSubmit}>
+    <form className="new-accolade-form callout" onSubmit={(e) => {e.preventDefault(); props.handleSubmit(newAccolade);} }>
       <label className="accolade-label">
-        What's got you hyped on {props.user.first_name}?
+        What's got you hyped on {user.first_name}?
         <input
           name="body"
           id="body"
           type="text"
-          onChange={handleChange}
+          onChange={(e) => {handleChange(e)} }
           value={newAccolade.body}
         />
       </label>
@@ -45,13 +34,13 @@ const AccoladeForm = props => {
           name="nominator"
           id="nominator"
           type="textarea"
-          onChange={handleChange}
+          onChange={(e) => {handleChange(e)} }
           value={newAccolade.nominator}
         />
       </label>
 
       <div className="button-group">
-        <input className="button" type="submit" value="All Aboard!" />
+        <input className="button" type="submit" value="Submit" />
       </div>
     </form>
   )
