@@ -3,35 +3,24 @@ import { Link } from "react-router-dom"
 
 const AccoladeForm = props => {
 
-  const {handleSubmit} = props
+  const { user } = props;
+
   const [newAccolade, setNewAccolade] = useState({
     body: "",
-    // chosen_charity: "",
     nominator: ""
-  })
+  });
 
   const handleChange = (event) => {
-    console.log(event)
     setNewAccolade({
       ...newAccolade,
       [event.currentTarget.name]: event.currentTarget.value
     })
   }
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   props.addNewAccoladeFunction(newAccolade)
-  //   setNewAccolade({
-  //     body: newAccolade.body,
-  //     // chosen_charity: "",
-  //     nominator: newAccolade.nominator
-  //   })
-  // }
-
   return (
-    <form className="new-accolade-form callout" onSubmit={handleSubmit}>
+    <form className="new-accolade-form callout" onSubmit={(e) => {e.preventDefault(); props.handleSubmit(newAccolade);} }>
       <label className="accolade-label">
-        What's got you hyped on {props.user.first_name}?
+        What's got you hyped on {user.first_name}?
         <input
           name="body"
           id="body"
