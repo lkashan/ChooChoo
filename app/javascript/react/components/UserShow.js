@@ -43,6 +43,7 @@ const UserShow = (props) => {
 
   const handleSubmit = (newAccolade) => {
     const formPayload = {accolade: newAccolade}
+  
 
     fetch(`/api/v1/users/${user.id}/accolades`, {
       credentials: "same-origin",
@@ -67,6 +68,8 @@ const UserShow = (props) => {
     .then(body => {setAccolades([...accolades, body.accolade]);})
     .catch(error => console.error(`Error in fetch: ${error.message}`))
     }
+
+
    const accoladeTileArray = accolades.map((accolade) => {
     return (
       <AccoladeTile
@@ -76,6 +79,7 @@ const UserShow = (props) => {
         body={accolade.body}
       />
     );
+
   });
 
   return (

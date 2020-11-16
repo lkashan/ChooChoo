@@ -9,6 +9,13 @@ const AccoladeForm = props => {
     nominator: ""
   });
 
+  const clearForm = () => {
+    setNewAccolade({
+      body: "",
+      nominator: ""
+    })
+  }
+
   const handleChange = (event) => {
     setNewAccolade({
       ...newAccolade,
