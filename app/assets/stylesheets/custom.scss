@@ -3,10 +3,16 @@
 
 body {
   background-color: #FCE3B0;
+  background-image: url("https://i.imgur.com/0Dd46rI.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;  
+  background-size: cover; 
+  height: auto;
+  background-attachment: fixed;
 };
 
 nav.top-bar {
-  background-color: #FCE3B0;
+
 }
 
 .callout.large {
