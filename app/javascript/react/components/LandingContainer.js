@@ -5,6 +5,13 @@ import UserShow from './UserShow'
 
 export const LandingContainer = (props) => (
 <div>
+  <div className="titlelogo">
+    <img
+      id="logo-full" 
+      src="https://i.imgur.com/jKyP4DG.png"
+      alt="train logo with parrots"
+      />
+    </div>
   <div className="welcome">
     <h2>Your Own Personal Hype Train!</h2>
     <h3 className="app-description">
@@ -39,7 +46,8 @@ export const LandingContainer = (props) => (
     <SearchBar/>
   </div> 
   <div className="grid-container science">
-    <h3 className="text-center">Believe the Hype: The Science Behind ChooChoo</h3>
+    <div className="cell"><div className="card">
+      <h3 className="text-center">Believe the Hype: The Science Behind ChooChoo</h3></div></div>
     <div className="grid-x grid-margin-x medium-up-2 large-up-2">
       <div className="cell">
         <div className="card">

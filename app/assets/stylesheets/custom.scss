@@ -2,7 +2,10 @@
 
 
 body {
-  background-color: #FCE3B0;
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 400;
+  color: $dark-liver;
+  background-color: $emerald;
   background-image: url("https://i.imgur.com/0Dd46rI.jpeg");
   background-position: top;
   background-repeat: no-repeat;  
@@ -11,15 +14,35 @@ body {
   background-attachment: fixed;
 };
 
-nav.top-bar {
+h1, h3, h5 {
+  font-family: 'Fanwood Text', Serif;
+  font-weight: 400;
+};
 
+h2, h4, h6 {
+  font-family: 'Shrikhand', Cursive;
+  font-weight: 700;
+};
+
+p {
+  font-family: 'Fanwood Text', Serif;
+}
+
+nav.top-bar {
+}
+
+.titlelogo {
+  text-align: center;
+  margin: 50px auto;
 }
 
 .callout.large {
   margin: 75px 6rem 0.5rem 6rem;
-  border-radius: .2rem;
+  text-align: center;
+  border-radius: 3rem;
+  color: $dark-liver;
   background-color: $peach;
-  border: 1px solid $emerald;
+  border: 3px solid $dark-liver;
 }
 
 .science {
@@ -29,10 +52,12 @@ nav.top-bar {
 .welcome {
   text-align: center;
   border: 3px solid $dark-liver;
-  border-radius: .2rem;
+  border-radius: 5rem;
   width: fit-content;
   margin: 50px auto;
   padding: 20px;
+  background-color: $sand;
+  // opacity: 0.6
 }
 
 .app-description {
@@ -45,11 +70,27 @@ nav.top-bar {
   margin-right: 8px;
 }
 
-.logo-text{
-  font-family: 'Arima Madurai', cursive;
-}
+// .logo-text{
+//   font-family: 'Arima Madurai', cursive;
+// }
 
 .card {
   border-radius: .2rem;
 }
 
+.button {
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: $peach;
+  border-radius: 2em;
+}
+
+.button:hover, .button.focus {
+  background-color: $orange;
+}
+.button.hollow.button {
+  color: $sand
+}
