@@ -15,7 +15,7 @@ export const LandingContainer = (props) => (
   <div className="welcome">
     <h2>Your Own Personal Hype Train!</h2>
     <h3 className="app-description">
-    ChooChoo is a pro-social, empathetic engagement app 
+    Choo-Choo is a pro-social, empathetic engagement app 
     based on the science of the relationship between generosity 
     and happiness, and seeks to foster a cycle of positive community engagement 
     and corresponding charitable donations.
@@ -24,30 +24,31 @@ export const LandingContainer = (props) => (
   <div className="callout large primary">
     <div className="media-object stack-for-small">
       <div className="media-object-section">
-        <h4 className="text-center">What? Why? How?</h4>
-        <p>
-          ChooChoo is platform where folks can send out their 
-          own personal hype train of public praise and superlatives 
-          to members of their community, and where their positive 
-          engagement is then correspondingly rewarded via charitable 
-          donations in the sender’s name. Good players in the community 
-          receive a text notification when someone has sent them an accolade, 
-          along with a link to the donation page of the corresponding 
-          charity selected by the nominator from our good player’s shortlist. 
-          Once our charitable samaritan has made good on their pledge, 
-          they submit a screenshot of their donation to their own profile, 
-          which will then dynamically update their cumulative donation total 
-          in correspondence with their pledged donation amount. 
+        <h3 className="getstarted">...What's A HypeTrain?</h3>
+        <p className="howitworks" >
+          A HypeTrain is a public accolade, superlative, or message of 
+          praise that you can send out to members of your community! When 
+          you send someone a HypeTrain, your positive community engagement 
+          is rewarded by the recipient of your HypeTrain when they make a 
+          corresponding donation to charity in your name as a thank you!
+          <br></br><br></br>
+          When a HypeTrain is sent your way, it will have two destinations:
+          <ol>
+          <li> Your text inbox, where you can read your accolade immediately, 
+          get all those warm and fuzzy feelings from it, and then follow the 
+          included link to your charity's website so you can make good on your pledge.</li>
+          <li>Your profile page, where you can show off all your HypeTrains over 
+          time, along with information about your chosen charity.</li>
+          </ol>
         </p>
+        <h3 classname="getstarted">Feeling the Hype Yet? Let's Get Started!</h3>
       </div>
     </div>
   </div>
-  <div>
     <SearchBar/>
-  </div> 
   <div className="grid-container science">
     <div className="cell"><div className="card">
-      <h3 className="text-center">Believe the Hype: The Science Behind ChooChoo</h3></div></div>
+      <h3 className="text-center">Believe the Hype:<br></br> The Science Behind Choo-Choo</h3></div></div>
     <div className="grid-x grid-margin-x medium-up-2 large-up-2">
       <div className="cell">
         <div className="card">
@@ -72,7 +73,7 @@ export const LandingContainer = (props) => (
               observable in both the brain and the body and can potentially be harnessed by 
               organizations and governments.
             </p>
-            <p>
+            <p><br></br>
             Citation:   Dunn, E. W., 
             Aknin, L. B., & Norton, M. I. (2014). 
             Prosocial Spending and Happiness: Using Money to Benefit 
@@ -121,24 +122,17 @@ export const LandingContainer = (props) => (
           </h5>
             <h6>Abstract:</h6>
             <p>
-            3 experiments with adult Ss investigated the effects of the experience of success 
+            Three experiments with adult Ss investigated the effects of the experience of success 
             or failure on subsequent generosity, helpfulness, and attention to the social environment. 
             On the basis of an intuitive formulation, designated the "warm glow of success" hypothesis, 
             it was expected that Ss who had succeeded on a task would subsequently behave more generously 
             and more helpfully toward a stranger than would Ss who had not succeeded. It was predicted 
             that Ss who had failed would be less attentive to the social environment than those who had 
             succeeded. In the success and failure groups, Ss performed a series of tasks and were then 
-            informed that they had scored either well above the norm or well below it. Control Ss in 1 
-            study were exposed to these tasks for about the same period of time, but had no opportunity 
-            to actually work on them, and thus received no feedback. In all conditions, after the independent 
-            variable manipulation was completed, the E left the room, and a confederate, who did not know the 
-            experimental condition of the S, entered. In Study I, the dependent measure was amount of money 
+            informed that they had scored either well above the norm or well below it. In Study I, the dependent measure was amount of money 
             contributed to a charity collection can which the confederate placed on the table. 
             In both Studies II and III, the dependent variables were helpfulness and attentiveness to 
-            the confederate. Results support the predictions. Internal analysis in Study III indicates that 
-            the findings regarding helping and those regarding attention were independent of each other. 
-            Several possible interpretations of the results are offered. The role of the S's feelings of 
-            competence and his expectancy for future incoming resources is suggested as a mediator. 
+            the confederate. Results support the predictions. 
             (PsycINFO Database Record (c) 2016 APA, all rights reserved)
             </p>
             <p>
@@ -170,7 +164,7 @@ export const LandingContainer = (props) => (
             for a positive feedback loop between prosocial spending and well-being, these data offer 
             one potential path to sustainable happiness: prosocial spending increases 
             happiness which in turn encourages prosocial spending.
-            </p>
+            </p><br></br><br></br>
             <p>
             Citation: Aknin, L.B., Dunn, E.W. & Norton, M.I. Happiness Runs 
             in a Circular Motion: Evidence for a Positive Feedback Loop between Prosocial 

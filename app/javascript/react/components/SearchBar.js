@@ -43,14 +43,13 @@ class SearchBar extends Component {
 
     return(
       <div className="searchbar">
-      <form onSubmit={this.handleSubmit}>
-        <label><h4>Find Your Flock:</h4></label>
-        <input type='text' name='searchString' value={this.state.searchString} onChange={this.handleChange} />
-        <div className="button-group"></div>
-        <input type='submit' value='Submit' />
-      </form>
-      <ul>{users}</ul>
-    </div>
+        <form onSubmit={this.handleSubmit}>
+          <label><h4>Find Your Flock:</h4></label>
+          <input type='text' name='searchString' value={this.state.searchString} onChange={this.handleChange} />
+          <input className="button" type="submit" value="Submit" />
+        </form>
+          <ul>{users}</ul>
+      </div>
     )
   }
 }

@@ -3,7 +3,7 @@
 
 body {
   font-family: 'Poppins', Sans-Serif;
-  font-weight: 400;
+  font-weight: 450;
   color: $dark-liver;
   background-color: $emerald;
   background-image: url("https://i.imgur.com/0Dd46rI.jpeg");
@@ -14,21 +14,31 @@ body {
   background-attachment: fixed;
 };
 
-h1, h3, h5 {
-  font-family: 'Fanwood Text', Serif;
+h1, h2, h3, h4 {
+  font-family: 'Shrikhand', Cursive;
   font-weight: 400;
+  color: $dark-liver;
 };
 
-h2, h4, h6 {
-  font-family: 'Shrikhand', Cursive;
-  font-weight: 700;
+h5 {
+  font-family: 'Fanwood Text', Serif;
+  font-weight: 900;
 };
 
 p {
   font-family: 'Fanwood Text', Serif;
+  font-weight: 500;
 }
 
-nav.top-bar {
+button.nav {
+  margin-bottom: .5rem;
+}
+
+.logo-name {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 .titlelogo {
@@ -36,22 +46,9 @@ nav.top-bar {
   margin: 50px auto;
 }
 
-.callout.large {
-  margin: 75px 6rem 0.5rem 6rem;
-  text-align: center;
-  border-radius: 3rem;
-  color: $dark-liver;
-  background-color: $peach;
-  border: 3px solid $dark-liver;
-}
-
-.science {
-  margin-top: 50px;
-}
-
 .welcome {
   text-align: center;
-  border: 3px solid $dark-liver;
+  border: 4px solid $dark-liver;
   border-radius: 5rem;
   width: fit-content;
   margin: 50px auto;
@@ -62,30 +59,64 @@ nav.top-bar {
 
 .app-description {
   color: $dark-liver;
-  font-weight: 200;
-  font-size: 1em;
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.callout.large {
+  margin: 50px 4rem 4rem 4rem;
+  text-align: center;
+  border: 4px solid $dark-liver;
+  border-radius: 6rem;
+  color: $dark-liver;
+  background-color: $peach;
+}
+
+.howitworks {
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 500;
+}
+
+.getstarted {
+  font-family: 'Shrikhand', Cursive;
+  font-weight: 400;
+  color: $dark-liver;
+}
+
+.searchbar {
+  position: relative;
+  text-align: center;
+  margin: 50px 4rem 4rem 4rem;
+  border: 4px solid $dark-liver;
+  border-radius: 5rem;
+  padding: 40px;
+  background-color: $sand;
+}
+
+.science {
+  margin-top: 50px;
 }
 
 .button.landing {
   margin-right: 8px;
 }
 
-// .logo-text{
-//   font-family: 'Arima Madurai', cursive;
-// }
-
 .card {
-  border-radius: .2rem;
+  text-align: left;
+  border: 2px solid $dark-liver;
+  border-radius: .7rem;
 }
 
 .button {
   font-family: 'Poppins', Sans-Serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
   background-color: $peach;
   border-radius: 2em;
+  margin-right: 15px; 
 }
 
 .button:hover, .button.focus {
@@ -93,4 +124,59 @@ nav.top-bar {
 }
 .button.hollow.button {
   color: $sand
+}
+
+.cell {
+  text-align: center;
+}
+
+.profileformtitle {
+  text-align: center;
+}
+
+.userprofileform {
+  margin: 50px 4rem 4rem 4rem;
+  font-family: 'Poppins', Sans-Serif;
+  color: $dark-liver;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $dark-liver;
+}
+
+.input.button {
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: $peach;
+  border-radius: 2em;
+  margin-right: 15px; 
+}
+
+.flash {
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: $orange;
+  color: $off-white;
+  padding: 20px;
+  border-radius: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.error_explanation {
+  font-family: 'Poppins', Sans-Serif;
+  font-weight: 900;
+  font-size: 15px;
+  background-color: $orange;
+  color: $off-white;
+  padding: 30px;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
