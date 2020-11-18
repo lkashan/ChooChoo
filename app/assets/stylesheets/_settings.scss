@@ -69,17 +69,17 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #FF7075,
-  secondary: #767676,
+  primary: #DF7979,
+  secondary: #4A4546,
   success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
+  warning: #E4764E,
+  alert: #7A2934,
 );
-$sand: #FCE3B0;
-$peach: #FF7075;
-$dark-liver: #63585e;
-$teal: #78E3D3;
-$emerald: 076974;
+$sand: #Fbbe89;
+$peach: #DF7979;
+$dark-liver: #4A4546;
+$teal: #4BAA9F;
+$emerald: #025D64;
 $off-white: #fff5d9;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -458,7 +458,7 @@ $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
 $input-placeholder-color: $medium-gray;
-$input-font-family: inherit;
+$input-font-family: 'Poppins', Sans-Serif;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
