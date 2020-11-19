@@ -19,10 +19,10 @@ feature 'user registers', %Q{
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
 
-    click_button 'All Aboard!'
+    click_button 'Submit'
 
     expect(page).to have_content('Welcome! You have signed up successfully.')
-    expect(page).to have_content('All Aboard!')
+    expect(page).to have_content('Submit')
   end
 
   scenario 'provide invalid registration information' do

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ChooChoo</title>
+  <title>Choo-Choo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Fanwood+Text|Shrikhand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
 </head>
 <body>
   <nav class="top-bar">
-    <h1><a href="/">ChooChoo</a></h1>
+    <a class="logo-name" href="/"><%= image_tag("ChooChooName.png", size:"250x250", :alt => "logo name") %></a>
     <section class="top-bar-section">
-      <ul class="right">
+      <div class="right">
         <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :class => "button nav"  %>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <%= link_to 'Sign Up', new_user_registration_path, :class => "button nav" %>     <%= link_to 'Sign In', new_user_session_path, :class => "button nav" %>
         <%- end -%>
-      </ul>
+      </div>
     </section>
   </nav>
 
@@ -39,5 +40,17 @@
   <%= javascript_pack_tag 'application' %>
   
   <%= yield :extra_footer %>
+  <div class="grid-x footer align-middle grid-padding-x align-self-bottom">
+    <div class="cell medium-12">
+      <h6>Dedicated to Boston 30 and the Conductor of The System Check Hype Train, who teaches to all the power of kindness, compassion, and teamwork </h6>
+      <h6>Created by a strange little bird <3</h6>
+    </div>
+    <%# <div class="cell medium-6 align-end">
+      <ul>
+        <li class="icons"><a href="https://github.com/kaydc18"><%= image_tag("gitHubIcon.png") %></a></li>
+        <%# <li class="icons"><a href="https://www.linkedin.com/in/kdiciaccio/"><%= image_tag("linkedinIcon.png") %></a></li>
+      <%# </ul> %>
+    <%# </div> %>
+  </div> 
   </body>
 </html>

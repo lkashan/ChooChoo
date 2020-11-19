@@ -16,6 +16,10 @@ const UserShow = (props) => {
 
   const id = props.match.params.id;
 
+  const callbackFunction = (accoladeFormData) => {
+    accoladeFormData
+  }
+
   useEffect(() => {
 
     fetch(`/api/v1/users/${id}`, {
@@ -66,7 +70,10 @@ const UserShow = (props) => {
     .then(response => response.json())
     .then(body => {setAccolades([...accolades, body.accolade]);})
     .catch(error => console.error(`Error in fetch: ${error.message}`))
-    }
+  callbackFunction()
+}
+    
+
    const accoladeTileArray = accolades.map((accolade) => {
     return (
       <AccoladeTile
@@ -79,24 +86,22 @@ const UserShow = (props) => {
   });
 
   return (
-    <div>
-      <h3>All Aboard The {user.first_name} {user.last_name} HypeTrain!</h3>
-      <div>
-        <ul>
-          <li>My Chosen Charity: <a href="{user.charity_1_link}"> {user.charity_1} </a></li>
-          <li>For each HypeTrain I receive, I pledge to donate: ${user.donation_pledge}</li>
-        </ul>
-      </div>
-      <div>
-        <AccoladeForm
-          id={id}
-          handleSubmit={handleSubmit}
-          user={user}
+    <div><br></br><br></br><br></br><br></br>
+      <h2 className="user-show-title">All Aboard The {user.first_name} {user.last_name} HypeTrain!</h2>
+      <div className="charity-data">
+        <h4>My Chosen Charity: <a href="{user.charity_1_link}"> {user.charity_1} </a></h4>
+        <h5>For each HypeTrain I receive, I pledge to donate: ${user.donation_pledge}</h5>
+        <p>”Trans Women of Color Collective (TWOCC) was created to cultivate economic opportunities and affirming spaces for trans people of color and our families, to foster kinship, build community, engage in healing and restorative justice through arts, culture, media, advocacy and activism. Our efforts center those in our community who have not had access to resources, opportunities and sustainable systems of support to live unapologetically in their truths; Trans and gender non-conforming people of color, in particularly Black trans women and femmes, poor, indigenous, disabled, our seniors and youth who are disproportionately impacted by structural and state sanctioned violence that impacts our socio-economic growth and development and is inextricably linked to physical violence and discrimination we face daily. ”</p>
+      </div> 
+      <AccoladeForm
+        id={id}
+        handleSubmit={handleSubmit}
+        user={user}
+        callbackFunction={callbackFunction}
         />
-        <h3>See what everyone else has been squawking about: </h3>
-        <div className="accolade-list">
-          {accoladeTileArray}
-        </div>
+      <div>
+        <h3 className="accolade-list-title">See what everyone else has been squawking about:</h3>
+        {accoladeTileArray}
       </div>
     </div>
   )

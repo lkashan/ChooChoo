@@ -5,7 +5,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
 
-  # “sets the default database cleaning strategy to be transactions”
+  # “sets the default database cleaning strategy to be transbutton”
   #
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
