@@ -41,7 +41,7 @@ export const LandingContainer = (props) => (
           time, along with information about your chosen charity.</li>
           </ol>
         </p>
-        <h3 classname="getstarted">Feeling the Hype Yet? Let's Get Started!</h3>
+        <h3 className="getstarted">Feeling the Hype Yet? Let's Get Started!</h3>
       </div>
     </div>
   </div>
