@@ -13,7 +13,7 @@ export const LandingContainer = (props) => (
       />
     </div>
   <div className="welcome">
-    <h2>Your Own Personal Hype Train!</h2>
+    <h2>Your Own Personal HypeTrain!</h2>
     <h3 className="app-description">
     Choo-Choo is a pro-social, empathetic engagement app 
     based on the science of the relationship between generosity 
@@ -47,20 +47,21 @@ export const LandingContainer = (props) => (
   </div>
     <SearchBar/>
   <div className="grid-container science">
-    <div className="cell"><div className="card">
+    <div className="cell">
+      <div className="card">
       <h3 className="text-center">Believe the Hype:<br></br> The Science Behind Choo-Choo</h3></div></div>
     <div className="grid-x grid-margin-x medium-up-2 large-up-2">
       <div className="cell">
         <div className="card">
           <div className="card-section">
-            <h5>
+            <h5 className="science">
               <a href="https://doi.org/10.1177/0963721413512503">
               Prosocial Spending 
               and Happiness: Using Money to Benefit Others Pays Off
               </a> 
             </h5>
             <h6>Abstract:</h6>
-            <p>
+            <p className="science">
               Although a great deal of research has shown that people 
               with more money are somewhat happier than are people with less money, 
               our research demonstrates that how people spend their money also matters 
@@ -72,13 +73,12 @@ export const LandingContainer = (props) => (
               (relatedness, competence, and autonomy). The rewards of prosocial spending are 
               observable in both the brain and the body and can potentially be harnessed by 
               organizations and governments.
-            </p>
-            <p><br></br>
-            Citation:   Dunn, E. W., 
-            Aknin, L. B., & Norton, M. I. (2014). 
-            Prosocial Spending and Happiness: Using Money to Benefit 
-            Others Pays Off. Current Directions in Psychological Science, 
-            23(1), 41–47.
+              <br></br><br></br>
+              Citation:   Dunn, E. W., 
+              Aknin, L. B., & Norton, M. I. (2014). 
+              Prosocial Spending and Happiness: Using Money to Benefit 
+              Others Pays Off. Current Directions in Psychological Science, 
+              23(1), 41–47.
             </p>
           </div>
         </div>
@@ -86,13 +86,14 @@ export const LandingContainer = (props) => (
       <div className="cell">
         <div className="card">
           <div className="card-section">
-            <h5>
+            <h5 className="science">
               <a href="https://doi.org/10.1037/h0032317">
               Effect of feeling good on helping: Cookies and kindness.
-              </a> 
+              </a>
             </h5>
+            &nbsp;
             <h6>Abstract:</h6>
-            <p>
+            <p className="science">
             Investigated the effects of a person's positive affective state on his or her 
             subsequent helpfulness to others. "Feeling good" was induced (a) in 52 male 
             undergraduates by having received cookies while studying in a library (Study I), 
@@ -104,8 +105,7 @@ export const LandingContainer = (props) => (
             dropped in front of them. On the basis of previous research, it was predicted that 
             Ss who were thus made to "feel good" would be more helpful than control Ss. Results 
             support the predictions. (PsycInfo Database Record (c) 2020 APA, all rights reserved)
-            </p>
-            <p>
+            <br></br><br></br>
             Citation:   Isen, A. M., & Levin, P. F. (1972). Effect of feeling good on helping: 
             Cookies and kindness. Journal of Personality and Social Psychology, 21(3), 384–388.
             </p>
@@ -115,13 +115,13 @@ export const LandingContainer = (props) => (
       <div className="cell">
         <div className="card">
           <div className="card-section">
-          <h5>
+          <h5 className="science">
             <a href="https://content.apa.org/doi/10.1037/h0029610">
             Success, failure, attention and reaction to others: 
             The warm glow of success.</a> 
           </h5>
             <h6>Abstract:</h6>
-            <p>
+            <p className="science">
             Three experiments with adult Ss investigated the effects of the experience of success 
             or failure on subsequent generosity, helpfulness, and attention to the social environment. 
             On the basis of an intuitive formulation, designated the "warm glow of success" hypothesis, 
@@ -134,8 +134,7 @@ export const LandingContainer = (props) => (
             In both Studies II and III, the dependent variables were helpfulness and attentiveness to 
             the confederate. Results support the predictions. 
             (PsycINFO Database Record (c) 2016 APA, all rights reserved)
-            </p>
-            <p>
+            <br></br><br></br>
             Citation:   Isen, A. M. (1970). Success, failure, attention, and reaction to others: 
             The warm glow of success. Journal of Personality and Social Psychology, 15(4), 294–301. 
             </p>
@@ -145,13 +144,13 @@ export const LandingContainer = (props) => (
       <div className="cell">
         <div className="card">
           <div className="card-section">
-          <h5>
+          <h5 className="science">
             <a href="https://doi.org/10.1007/s10902-011-9267-5">
             Happiness Runs in a Circular Motion: Evidence for a Positive 
             Feedback Loop between Prosocial Spending and Happiness</a> 
           </h5>
             <h6>Abstract:</h6>
-            <p>
+            <p className="science">
             We examine whether a positive feedback loop exists between spending 
             money on others (i.e. prosocial spending) and happiness. Participants 
             recalled a previous purchase made for either themselves or someone else 
@@ -164,8 +163,7 @@ export const LandingContainer = (props) => (
             for a positive feedback loop between prosocial spending and well-being, these data offer 
             one potential path to sustainable happiness: prosocial spending increases 
             happiness which in turn encourages prosocial spending.
-            </p><br></br><br></br>
-            <p>
+            <br></br><br></br><br></br>
             Citation: Aknin, L.B., Dunn, E.W. & Norton, M.I. Happiness Runs 
             in a Circular Motion: Evidence for a Positive Feedback Loop between Prosocial 
             Spending and Happiness. J Happiness Stud 13, 347–355 (2012).

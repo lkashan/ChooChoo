@@ -3,7 +3,7 @@
 
 body {
   font-family: 'Poppins', Sans-Serif;
-  font-weight: 450;
+  font-weight: 700;
   color: $dark-liver;
   background-color: $emerald;
   background-image: url("https://i.imgur.com/0Dd46rI.jpeg");
@@ -14,18 +14,19 @@ body {
   background-attachment: fixed;
 };
 
+
 h1, h2, h3, h4 {
   font-family: 'Shrikhand', Cursive;
   font-weight: 400;
   color: $dark-liver;
 };
 
-h5 {
+h5.science {
   font-family: 'Fanwood Text', Serif;
   font-weight: 900;
 };
 
-p {
+p.science {
   font-family: 'Fanwood Text', Serif;
   font-weight: 500;
 }
@@ -48,7 +49,7 @@ button.nav {
 
 .welcome {
   text-align: center;
-  border: 4px solid $dark-liver;
+  border: 3px solid $dark-liver;
   border-radius: 5rem;
   width: fit-content;
   margin: 50px auto;
@@ -67,7 +68,7 @@ button.nav {
 .callout.large {
   margin: 50px 4rem 4rem 4rem;
   text-align: center;
-  border: 4px solid $dark-liver;
+  border: 3px solid $dark-liver;
   border-radius: 6rem;
   color: $dark-liver;
   background-color: $peach;
@@ -81,21 +82,17 @@ button.nav {
 .getstarted {
   font-family: 'Shrikhand', Cursive;
   font-weight: 400;
-  color: $dark-liver;
+  color: #ffffff;
 }
 
 .searchbar {
   position: relative;
   text-align: center;
-  margin: 50px 4rem 4rem 4rem;
-  border: 4px solid $dark-liver;
+  margin: 40px 4rem 4rem 4rem;
+  border: 3px solid $dark-liver;
   border-radius: 5rem;
-  padding: 40px;
+  padding: 30px;
   background-color: $sand;
-}
-
-.science {
-  margin-top: 50px;
 }
 
 .button.landing {
@@ -126,6 +123,10 @@ button.nav {
   color: $sand
 }
 
+a:hover, a:focus {
+  color: $orange;
+}
+
 .cell {
   text-align: center;
 }
@@ -137,13 +138,13 @@ button.nav {
 .userprofileform {
   margin: 50px 4rem 4rem 4rem;
   font-family: 'Poppins', Sans-Serif;
-  color: $dark-liver;
+  color: $white;
 }
 
 label {
   font-size: 1.5rem;
   font-weight: 600;
-  color: $dark-liver;
+  color: $white;
 }
 
 .input.button {
@@ -180,3 +181,81 @@ label {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+
+li {
+  text-align: justify;
+  margin-right: 15px;
+}
+
+ul {
+  font-family: 'Shrikhand', Cursive;
+  letter-spacing: 1px;
+  color: $dark-liver;
+  font-weight: 100;
+  list-style-position: inside;
+}
+
+h2.user-show-title {
+  margin: 20px auto;
+  text-align: center;
+}
+
+h3.accolade-list-title {
+  margin: 50px auto;
+  border: 3px solid $dark-liver;
+  border-radius: 5rem;
+  width: 100%;
+  padding: 8px;
+  background-color: $sand;
+  font-weight: 50;
+  text-align: center;
+  letter-spacing: 2px
+
+}
+
+.charity-data {
+  border: 3px solid $dark-liver;
+  border-radius: 5rem;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: $sand;
+}
+
+.new-accolade-form {
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  border: 3px solid $dark-liver;
+  border-radius: 5rem;
+  color: $dark-liver;
+  background-color: $peach;
+  width: 100%;
+}
+
+.accolade-tile {
+  border: 3px solid $dark-liver;
+  border-radius: 5rem;
+  width: 100%;
+  padding: 30px;
+  color: #ffffff;
+  background-color: $peach;
+  font-weight: 900;
+}
+.input.body {
+  font-family: 'Poppins', Sans-Serif;
+}
+
+
+.accolade-label {
+  font-family: 'Shrikhand', cursive;
+  color: #ffffff;
+  font-weight: 50;
+  font-size: 1.5rem;
+}
+
+input.button{
+}
+
+
+

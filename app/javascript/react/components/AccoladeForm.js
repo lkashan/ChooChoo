@@ -16,6 +16,11 @@ const AccoladeForm = props => {
     })
   }
 
+  const sendAccoladeFormData = () => {
+    props.callbackFunction(clearForm)
+  } 
+  sendAccoladeFormData()
+
   const handleChange = (event) => {
     setNewAccolade({
       ...newAccolade,
@@ -24,7 +29,7 @@ const AccoladeForm = props => {
   }
 
   return (
-    <form className="new-accolade-form callout" onSubmit={(e) => {e.preventDefault(); props.handleSubmit(newAccolade);} }>
+    <form className="new-accolade-form" onSubmit={(e) => {e.preventDefault(); props.handleSubmit(newAccolade);} }>
       <label className="accolade-label">
         What's got you hyped on {user.first_name}?
         <input
@@ -36,19 +41,16 @@ const AccoladeForm = props => {
         />
       </label>
       <label className="accolade-label">
-        Who You Bees?:
-        <input
+        Your Name:<br></br>
+        <input className="form-field"
           name="nominator"
           id="nominator"
           type="textarea"
           onChange={(e) => {handleChange(e)} }
           value={newAccolade.nominator}
         />
-      </label>
-
-      <div className="button-group">
-        <input className="button" type="submit" value="Submit" />
-      </div>
+      </label><br></br>
+      <input className="button" type="submit" value="All Aboard!" />
     </form>
   )
 }
