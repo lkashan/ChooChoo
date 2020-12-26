@@ -29,7 +29,7 @@ const AccoladeForm = props => {
   }
 
   return (
-    <form className="new-accolade-form" onSubmit={(e) => {e.preventDefault(); props.handleSubmit(newAccolade);} }>
+    <form className="new-accolade-form" onSubmit={(e) => {props.handleSubmit(newAccolade)} }>
       <label className="accolade-label">
         What's got you hyped on {user.first_name}?
         <input
