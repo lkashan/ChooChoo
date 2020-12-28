@@ -14,12 +14,13 @@ const AccoladeForm = props => {
       body: "",
       nominator: ""
     })
+    console.log("clearform was hit")
   }
 
-  const sendAccoladeFormData = () => {
+  const accoladeFormData = () => {
     props.callbackFunction(clearForm)
   } 
-  sendAccoladeFormData()
+  accoladeFormData()
 
   const handleChange = (event) => {
     setNewAccolade({
