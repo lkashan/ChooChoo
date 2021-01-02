@@ -11,6 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :phone_number,       null: false, default: ""
       t.integer :donation_pledge,   null: false, default: ""
       t.string :charity_1,          null: false, default: ""
+      t.string :charity_1_info,     null: false, default: ""
       t.string :charity_1_link,     null: false, default: ""
       # t.string :charity_2, null: false, default: ""
       # t.string :charity_2_link, null: false, default: ""

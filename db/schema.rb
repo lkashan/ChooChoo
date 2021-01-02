@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_181930) do
     t.string "phone_number", default: "", null: false
     t.integer "donation_pledge", null: false
     t.string "charity_1", default: "", null: false
+    t.string "charity_1_info", default: "", null: false
     t.string "charity_1_link", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
