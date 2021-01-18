@@ -6,7 +6,6 @@ const AccoladeForm = props => {
   const {handleSubmit} = props
   const [newAccolade, setNewAccolade] = useState({
     body: "",
-    // chosen_charity: "",
     nominator: ""
   })
 
@@ -17,16 +16,6 @@ const AccoladeForm = props => {
       [event.currentTarget.name]: event.currentTarget.value
     })
   }
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   props.addNewAccoladeFunction(newAccolade)
-  //   setNewAccolade({
-  //     body: newAccolade.body,
-  //     // chosen_charity: "",
-  //     nominator: newAccolade.nominator
-  //   })
-  // }
 
   return (
     <form className="new-accolade-form callout" onSubmit={handleSubmit}>

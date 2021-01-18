@@ -20,6 +20,7 @@ class Api::V1::AccoladesController < ApplicationController
     accolade.user = user
 
     if accolade.save
+      accolade.send_sms
       render json: { accolade: accolade }
     else
       render json: { error: accolade.errors.full_message }, status: 400
